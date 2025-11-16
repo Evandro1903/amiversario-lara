@@ -1,0 +1,21 @@
+# OS & IDE
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Node (se for usado depois)
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Local testing
+serve.ps1
+start-server.bat
+teste.html
+
+# OS-specific
+desktop.ini
+.env.local

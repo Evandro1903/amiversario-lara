@@ -211,12 +211,26 @@ a{color:inherit}
 .footer{padding:24px 0;text-align:center;color:#6c5a85}
 
 /* Responsive tweaks */
+.featured-photos{padding:12px 0}
+.featured-photos .photo-large{max-width:880px;margin:0 auto}
+.featured-photos .photo-large img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;box-shadow:0 10px 24px rgba(0,0,0,0.08)}
+
 @media (max-width:900px){
-  .gallery{grid-template-columns:1fr}
-  .photo-card img, .photo-card video{aspect-ratio:4/3}
-  .hero{height:58vh}
+  .featured-photos .photo-large img{aspect-ratio:16/11}
 }
 
+@media (max-width:600px){
+  /* Hero mais confortável no mobile */
+  .hero{height:70vh}
+  .hero-content{max-width:98%;padding:1.25rem}
+  .name{font-size:2.8rem}
+  .meta{font-size:1rem}
+  /* Fotos em destaque menores */
+  .featured-photos .photo-large{max-width:680px}
+  .featured-photos .photo-large img{aspect-ratio:16/11;max-height:52vh}
+  /* Galeria com duas colunas para reduzir o tamanho das fotos */
+  .gallery{grid-template-columns:repeat(2, 1fr)}
+}
 @media (min-width:1400px){.card{max-width:1300px}}
 
 /* Final polish for face visibility */

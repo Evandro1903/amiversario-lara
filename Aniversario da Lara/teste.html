@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Convite - Lara 15 anos</title>
+   <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+         font-family: 'Nunito', Arial, sans-serif;
+         background: linear-gradient(135deg, #C8A2FF 0%, #FFD1E8 100%);
+         min-height: 100vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: 20px;
+      }
+      .container {
+         background: white;
+         border-radius: 20px;
+         padding: 40px;
+         max-width: 600px;
+         width: 100%;
+         box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      }
+      .header {
+         text-align: center;
+         margin-bottom: 30px;
+      }
+      .header h1 {
+         font-size: 48px;
+         color: #6a3f9a;
+         margin-bottom: 10px;
+      }
+      .header p {
+         color: #888;
+         font-size: 18px;
+      }
+      .details {
+         background: #f9f5ff;
+         padding: 20px;
+         border-radius: 10px;
+         margin: 20px 0;
+         text-align: center;
+      }
+      .detail-line {
+         margin: 10px 0;
+         font-size: 16px;
+         color: #333;
+      }
+      .label {
+         font-weight: bold;
+         color: #6a3f9a;
+      }
+      .buttons {
+         display: flex;
+         gap: 15px;
+         margin: 30px 0;
+         flex-wrap: wrap;
+         justify-content: center;
+      }
+      .btn {
+         padding: 15px 30px;
+         border: none;
+         border-radius: 10px;
+         font-size: 16px;
+         font-weight: bold;
+         cursor: pointer;
+         text-decoration: none;
+         display: inline-block;
+         transition: transform 0.2s;
+      }
+      .btn:hover {
+         transform: scale(1.05);
+      }
+      .btn-whatsapp {
+         background: #C8A2FF;
+         color: white;
+      }
+      .btn-pix {
+         background: #FFD1E8;
+         color: #333;
+      }
+      .pix-section {
+         background: #fff9ff;
+         padding: 20px;
+         border-radius: 10px;
+         margin: 20px 0;
+         text-align: center;
+      }
+      .pix-key {
+         font-size: 24px;
+         font-weight: bold;
+         color: #6a3f9a;
+         margin: 15px 0;
+         font-family: monospace;
+      }
+      .copy-btn {
+         padding: 10px 20px;
+         background: #C8A2FF;
+         color: white;
+         border: none;
+         border-radius: 8px;
+         cursor: pointer;
+         font-weight: bold;
+      }
+      .copy-btn:hover {
+         background: #b891e0;
+      }
+      .butterfly {
+         position: fixed;
+         font-size: 40px;
+         opacity: 0.6;
+         pointer-events: none;
+      }
+      .galeria {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+         gap: 15px;
+         margin-top: 20px;
+      }
+      .foto {
+         width: 100%;
+         height: 180px;
+         object-fit: cover;
+         border-radius: 10px;
+         border: 3px solid #C8A2FF;
+         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+         transition: transform 0.2s;
+      }
+      .foto:hover {
+         transform: scale(1.05);
+      }
+   </style>
+</head>
+<body>
+   <div class="butterfly" style="top: 10%; left: 5%;">🦋</div>
+   <div class="butterfly" style="top: 20%; right: 10%;">🦋</div>
+   <div class="butterfly" style="bottom: 30%; left: 15%;">🦋</div>
+   <div class="butterfly" style="bottom: 10%; right: 5%;">🦋</div>
+
+   <div class="container">
+      <div class="header">
+         <h1>Lara Silva</h1>
+         <p>15 Anos • Tema: Borboletas 🦋</p>
+      </div>
+
+      <div class="details">
+         <div class="detail-line"><span class="label">Data:</span> 10 de janeiro de 2026</div>
+         <div class="detail-line"><span class="label">Local:</span> Recanto Paris Festas e Eventos</div>
+      </div>
+
+      <div class="buttons">
+         <a href="https://wa.me/5534991622296?text=Olá%20Andrea%2C%20confirmo%20presença%20no%20aniversário%20da%20Lara%20(10%2F01%2F2026)" class="btn btn-whatsapp" target="_blank">
+            ✓ Confirmar Presença
+         </a>
+         <button class="btn btn-pix" onclick="document.getElementById('pix-section').scrollIntoView({behavior:'smooth'})">
+            🎁 Presente (PIX)
+         </button>
+      </div>
+
+      <div style="margin: 30px 0;">
+         <h2 style="color: #6a3f9a; margin-bottom: 15px; text-align: center;">Fotos</h2>
+         <div class="galeria">
+            <img src="foto1.jpg" alt="Foto 1" class="foto" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23E8D5FF%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2214%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%236a3f9a%22%3EColoque foto1.jpg%3C/text%3E%3C/svg%3E'" />
+            <img src="foto2.jpg" alt="Foto 2" class="foto" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23FFE8F0%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2214%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%236a3f9a%22%3EColoque foto2.jpg%3C/text%3E%3C/svg%3E'" />
+            <img src="foto3.jpg" alt="Foto 3" class="foto" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23E8D5FF%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2214%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%236a3f9a%22%3EColoque foto3.jpg%3C/text%3E%3C/svg%3E'" />
+            <img src="foto4.jpg" alt="Foto 4" class="foto" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23FFE8F0%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2214%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%236a3f9a%22%3EColoque foto4.jpg%3C/text%3E%3C/svg%3E'" />
+         </div>
+      </div>
+
+      <div class="pix-section" id="pix-section">
+         <h2 style="color: #6a3f9a; margin-bottom: 10px;">Presente via PIX</h2>
+         <p>Se desejar presentear, copie a chave PIX abaixo:</p>
+         <div class="pix-key">15999994632</div>
+         <button class="copy-btn" onclick="copiarChave()">Copiar Chave PIX</button>
+      </div>
+   </div>
+
+   <script>
+      function copiarChave() {
+         const chave = '15999994632';
+         navigator.clipboard.writeText(chave).then(() => {
+            alert('Chave PIX copiada! 📋');
+         }).catch(err => {
+            alert('Erro ao copiar: ' + err);
+         });
+      }
+   </script>
+</body>
+</html>

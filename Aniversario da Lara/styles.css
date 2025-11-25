@@ -1,0 +1,227 @@
+/* Cores: lilás (#C8A2FF), rosa baby (#FFD1E8), branco (#FFFFFF) */
+:root{
+  --lilas: #C8A2FF;
+  --rosa: #FFD1E8;
+  --branco: #FFFFFF;
+  --glass: rgba(255,255,255,0.85);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial}
+
+.hero{
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color:var(--lilas);
+  /* Use a imagem inicial em images/bg1.jpg (adicione a partir dos attachments) */
+  background-image: url('images/bg1.jpg');
+}
+
+.overlay{
+  width:min(920px,94%);
+  padding:28px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.95));
+  border-radius:16px;
+  text-align:center;
+  color:var(--branco);
+  box-shadow:0 8px 30px rgba(0,0,0,0.4);
+}
+
+.card{background:var(--glass); color:#222; padding:16px; margin:12px auto; border-radius:10px}
+
+.header h1{font-size:44px; margin:6px 0; color:#3b185f}
+.subtitle{margin:0;color: #6a3f9a}
+
+.details p{font-size:18px;margin:6px 0}
+
+.actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600}
+.rsvp{background:var(--lilas);color:var(--branco)}
+.pix{background:var(--rosa);color:#222}
+
+.pix-card h2{margin:6px 0}
+.pix-key{font-size:20px;letter-spacing:1px}
+
+.footer p{margin:0;font-size:14px;color:#333}
+
+@media (max-width:520px){
+  .header h1{font-size:28px}
+  .overlay{padding:16px}
+  .actions{flex-direction:column}
+}
+
+/* Pequenos detalhes de borboletas: gerado com CSS simples */
+.overlay::before{
+  content:"🦋";
+  position:absolute;left:8%;top:8%;font-size:34px;opacity:0.6
+}
+
+/* Instruções visuais quando imagem não existir */
+img.missing{width:100%;opacity:0.6;border-radius:8px}
+
+.gallery .thumbs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.gallery .thumbs img{width:120px;height:120px;object-fit:cover;border-radius:8px;border:3px solid rgba(255,255,255,0.6)}
+.gallery h3{margin:6px 0 12px 0;color:#3b185f}
+/* Lara invitation — clean, responsive stylesheet
+   Goals: clear card containers for text, prevent image distortion,
+   visible face in hero, responsive gallery, lightbox support.
+*/
+
+:root{
+  --lilas: #b084f5;
+  --rosa-baby: #ffb6d5;
+  --rosa-strong: #ff8fc0;
+  --accent: linear-gradient(90deg,#ff6b8a,#ff8fa4);
+  --muted: #9ea7b3;
+  --bg: #fbf8ff;
+  --text: #2b1b3a;
+}
+
+/* Base reset */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+}
+
+a{color:inherit}
+
+/* HERO */
+.hero{
+  height: 78vh;
+  min-height:420px;
+  background-size: cover;
+  background-position: center 20%; /* focus slightly higher to show faces */
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:2rem;
+}
+
+.hero::before{
+  content:'';
+  position:absolute;inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.22), rgba(0,0,0,0.30));
+  pointer-events:none;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:980px;
+  width:100%;
+  padding:2rem;
+  border-radius:12px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.02));
+}
+
+.name{
+  margin:0;
+  font-family: 'Great Vibes', cursive;
+  font-weight:400;
+  font-size: clamp(3rem, 7.5vw, 5.2rem);
+  color:#fff;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.meta{
+  margin-top:0.6rem;
+  color:rgba(255,255,255,0.95);
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+}
+
+.btn{
+  display:inline-block;
+  margin-top:1rem;
+  background: var(--accent);
+  color:#fff;
+  padding:0.7rem 1.1rem;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow: 0 8px 24px rgba(255,107,138,0.16);
+}
+
+/* Card container utility */
+.card{
+  max-width:1100px;
+  margin:28px auto;
+  padding:20px;
+}
+
+/* Details / messages as separate cards */
+.details{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+.detail{flex:1;min-width:220px;padding:14px;border-radius:12px;background:#fff;border:1px solid rgba(139,92,246,0.06);box-shadow:0 12px 28px rgba(43,27,58,0.04)}
+.detail .label{display:block;font-size:12px;color:var(--lilas);font-weight:700}
+.detail .value{display:block;font-size:16px;margin-top:6px;color:#432c6d}
+
+.mensagem{margin:0}
+.mensagem blockquote{margin:0 0 12px;padding:14px 18px;border-left:6px solid var(--lilas);background:linear-gradient(180deg,#fff,#fff);border-radius:10px;color:#3a235d}
+
+/* Gallery */
+.gallery-section{padding:3rem 1rem;background:transparent}
+.gallery-section h2{text-align:center;margin:0 0 1.4rem;font-size:1.6rem;color:var(--text)}
+
+.gallery{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap:16px;
+  max-width:1100px;
+  margin:0 auto;
+  align-items:stretch;
+}
+
+.photo-card{position:relative;border-radius:16px;overflow:hidden;background:#fff;padding:12px;box-shadow:0 14px 34px rgba(43,27,58,0.06)}
+.photo-card img{display:block;width:100%;height:auto;object-fit:cover;border-radius:12px}
+.photo-card video{display:block;width:100%;height:auto;object-fit:cover;border-radius:12px}
+
+/* Ensure thumbnails keep aspect ratio and don't stretch */
+.photo-card img, .photo-card video, .gallery img, .gallery video{
+  width:100%;
+  height:auto;
+  object-fit:cover;
+  object-position:center top;
+  aspect-ratio: 16 / 11; /* consistent thumbnail crop */
+  display:block;
+}
+
+.photo-card img:hover, .photo-card video:hover{transform: translateY(-6px);box-shadow:0 18px 40px rgba(2,8,20,0.12);transition:transform .3s ease, box-shadow .3s ease}
+
+.video-wrap video{height:100%;border:none;background:#000;border-radius:10px}
+
+/* Lightbox modal */
+.lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:9999}
+.lightbox.show{display:flex}
+.lightbox-backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.76)}
+.lightbox-content{position:relative;max-width:1100px;width:94%;z-index:2;display:flex;align-items:center;justify-content:center}
+.lightbox-inner img, .lightbox-inner video{max-width:100%;max-height:80vh;border-radius:12px;box-shadow:0 20px 50px rgba(0,0,0,0.6)}
+.lightbox-close{position:absolute;top:-22px;right:-22px;background:#fff;color:#333;border-radius:999px;border:none;width:46px;height:46px;font-size:24px;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,.18)}
+
+/* Footer */
+.footer{padding:24px 0;text-align:center;color:#6c5a85}
+
+/* Responsive tweaks */
+@media (max-width:900px){
+  .gallery{grid-template-columns:1fr}
+  .photo-card img, .photo-card video{aspect-ratio:4/3}
+  .hero{height:58vh}
+}
+
+@media (min-width:1400px){.card{max-width:1300px}}
+
+/* Final polish for face visibility */
+.hero{background-position:center 18%}
+.hero::before{background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.26));}
+
+/* small screens: scale down name */
+@media(max-width:600px){ .name{ font-size:2.1rem } .meta{ font-size:0.95rem }}

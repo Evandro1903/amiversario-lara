@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar no GitHub Pages - Lara</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #e0a6d9 0%, #ffc0d9 100%);
+            color: #333;
+        }
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #9c27b0;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+        .step {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0a6d9;
+        }
+        .step:last-child {
+            border-bottom: none;
+        }
+        .step-number {
+            display: inline-block;
+            background: #9c27b0;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+        .step h2 {
+            display: inline-block;
+            color: #9c27b0;
+            margin: 0;
+            vertical-align: middle;
+        }
+        .step-content {
+            margin-left: 55px;
+            margin-top: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #d32f2f;
+            font-weight: bold;
+        }
+        .code-block {
+            background: #f5f5f5;
+            border-left: 4px solid #9c27b0;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        .link-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        .link-list li {
+            padding: 10px;
+            margin: 5px 0;
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            border-radius: 4px;
+        }
+        .link-list a {
+            color: #ff9800;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .link-list a:hover {
+            text-decoration: underline;
+        }
+        .success-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .success-box h3 {
+            color: #4caf50;
+            margin-top: 0;
+        }
+        .success-box .url {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-family: 'Courier New', monospace;
+            word-break: break-all;
+            color: #9c27b0;
+            font-weight: bold;
+        }
+        .note {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            color: #1565c0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e0a6d9;
+            color: #9c27b0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Publicar Site no GitHub Pages</h1>
+        <p class="subtitle">Guia passo a passo para colocar seu convite online gratuitamente</p>
+
+        <div class="step">
+            <div>
+                <span class="step-number">1</span>
+                <h2>Preparar Repositório Local</h2>
+            </div>
+            <div class="step-content">
+                <p>Abra <strong>PowerShell</strong> ou <strong>Git Bash</strong> na pasta do projeto e execute:</p>
+                <div class="code-block">
+cd "c:\Aniversario da Lara"<br>
+git init<br>
+git config user.name "Seu Nome"<br>
+git config user.email "seu.email@gmail.com"<br>
+git add .<br>
+git commit -m "Initial commit: Lara's 15th birthday invitation"
+                </div>
+                <p><strong>✓ Pronto!</strong> Seu repositório local está criado.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div>
+                <span class="step-number">2</span>
+                <h2>Criar Repositório no GitHub</h2>
+            </div>
+            <div class="step-content">
+                <ol>
+                    <li>Acesse: <a href="https://github.com/new" target="_blank">https://github.com/new</a></li>
+                    <li><strong>Repository name:</strong> <code>aniversario-lara</code></li>
+                    <li><strong>Description:</strong> Convite de aniversário de 15 anos - Tema Borboletas</li>
+                    <li>Marque <strong>Public</strong></li>
+                    <li>Clique <strong>Create repository</strong></li>
+                </ol>
+                <p><strong>✓ Pronto!</strong> Você terá um repositório vazio pronto para receber o código.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div>
+                <span class="step-number">3</span>
+                <h2>Enviar Código para GitHub</h2>
+            </div>
+            <div class="step-content">
+                <p>O GitHub vai mostrar as instruções. Execute no PowerShell (substitua <code>SEU_USUARIO</code>):</p>
+                <div class="code-block">
+git branch -M main<br>
+git remote add origin https://github.com/SEU_USUARIO/aniversario-lara.git<br>
+git push -u origin main
+                </div>
+                <p><strong>✓ Pronto!</strong> Seu código está no GitHub.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div>
+                <span class="step-number">4</span>
+                <h2>Ativar GitHub Pages</h2>
+            </div>
+            <div class="step-content">
+                <ol>
+                    <li>No repositório GitHub, clique em <strong>Settings</strong> (ícone de engrenagem)</li>
+                    <li>Na barra esquerda, clique em <strong>Pages</strong></li>
+                    <li>Em <strong>Source</strong>, selecione <strong>main</strong></li>
+                    <li>Em <strong>Folder</strong>, selecione <strong>/ (root)</strong></li>
+                    <li>Clique <strong>Save</strong></li>
+                    <li>⏳ Aguarde 1-2 minutos</li>
+                </ol>
+                <p><strong>✓ Pronto!</strong> GitHub Pages está ativado.</p>
+            </div>
+        </div>
+
+        <div class="success-box">
+            <h3>✅ Sucesso!</h3>
+            <p>Seu site estará publicado em:</p>
+            <div class="url">
+                https://SEU_USUARIO.github.io/aniversario-lara
+            </div>
+            <p style="margin-bottom: 0;">Compartilhe este link com todos os convidados! 🎉</p>
+        </div>
+
+        <div class="note">
+            <strong>💡 Dica:</strong> Se fizer alterações no futuro, use:
+            <div class="code-block" style="margin-top: 10px;">
+git add .<br>
+git commit -m "Descrição da mudança"<br>
+git push
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Criado com 💜 para os 15 anos da Lara</p>
+            <p>Dúvidas? Veja a documentação: <a href="https://docs.github.com/pt/pages" target="_blank" style="color: #9c27b0;">GitHub Pages Docs</a></p>
+        </div>
+    </div>
+</body>
+</html>

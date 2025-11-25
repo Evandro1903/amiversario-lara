@@ -1,0 +1,13 @@
+[build]
+  command = "echo 'No build required'"
+  publish = "."
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Configuração para garantir que os assets sejam servidos
+[context.production]
+  command = "echo 'Static site - no build needed'"
+  publish = "."
